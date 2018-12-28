@@ -5,7 +5,7 @@ $.getJSON('http://localhost/api/studio')
 		// window.location.replace(`http://localhost:3000/studios/checkout/${id}`);
 
 		$('.studio-checkout-link').html(`
-		<a href=http://localhost:3000/studios/checkout/${id}>
+		<a href=http://localhost:3000/checkout/${id}>
 			<button>Studio Product Checkout </button>
 		</a>
 		`)
@@ -24,7 +24,7 @@ $.getJSON('http://localhost/api/event')
 	.then(response => {
 		const id = response.products[0].id
 		$('.event-checkout-link').html(`
-		<a href=http://localhost:3000/events/checkout/${id}>
+		<a href=http://localhost:3000/checkout/${id}>
 			<button>Free Event Product Checkout</button>
 		</a>
 		`)
@@ -41,7 +41,7 @@ $.getJSON('http://localhost/api/event')
 	.then(response => {
 		const id = response.products[0].id
 		$('.paid-event-checkout-link').html(`
-		<a href=http://localhost:3000/events/checkout/${id}>
+		<a href=http://localhost:3000/checkout/${id}>
 			<button>Paid Event Product Checkout</button>
 		</a>
 		`)
